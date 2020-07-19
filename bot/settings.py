@@ -25,7 +25,7 @@ SECRET_KEY = 'z0o5tcda8wtkr1p(y_r&%!6d85ksi91=nfekoeai@&c+ne39q)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['zeyu2001.pythonanywhere.com','921fa374105b.ngrok.io','127.0.0.1','127b80b99b9c.ngrok.io']
+ALLOWED_HOSTS = ['davincibot.herokuapp.com']
 
 
 # Application definition
