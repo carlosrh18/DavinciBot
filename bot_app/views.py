@@ -10,6 +10,8 @@ import random
 import numpy
 import json
 
+
+
 @csrf_exempt
 def index(request):
     
@@ -300,6 +302,10 @@ Last updated: {:02}/{:02}/{:02} {:02}:{:02}:{:03} UTC
              msg.body("No te entiendo, escribe hola para empezar")
 
         return HttpResponse(str(resp))
+    
+    if request.method == 'GET':
+        
+        return JsonResponse({"o":2})
     
    
         
