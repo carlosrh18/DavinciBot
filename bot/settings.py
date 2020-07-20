@@ -25,7 +25,7 @@ SECRET_KEY = 'z0o5tcda8wtkr1p(y_r&%!6d85ksi91=nfekoeai@&c+ne39q)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['davincibot.herokuapp.com']
+ALLOWED_HOSTS = ['davincibot.herokuapp.com','2ee16da6ed21.ngrok.io']
 
 
 # Application definition

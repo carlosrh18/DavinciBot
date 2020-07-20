@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http import JsonResponse
 import requests
 from twilio.twiml.messaging_response import MessagingResponse
 from django.views.decorators.csrf import csrf_exempt
@@ -11,9 +12,13 @@ import json
 
 @csrf_exempt
 def index(request):
+    
+        
     if request.method == 'POST':
         # retrieve incoming message from POST request in lowercase
         incoming_msg = request.POST['Body'].lower()
+        print(incoming_msg)
+        
 
         # create Twilio XML response
         
@@ -34,7 +39,7 @@ Puedes intentar escribir:
 :black_small_square: *'gato'*: Imagenes de michis para relajarte :cat:
 :black_small_square: *'gatogif<tu nombre> ejemplo: gatogifCarlos'*: Imagenes de michis con tu nombre :smile_cat:
 :black_small_square: *'perro'*: Imagenes de perritos para relajarte :dog:
-:black_small_square: *'meme'*: Los mejores memes de hoy :volcano:
+:black_small_square: *'meme'*: Los mejores memes en inglés de hoy :volcano:
 :black_small_square: *'ya puedo salir?':* Estado actual de la cuarentena del Covid-19 :mask:
 """, use_aliases=True)
             msg.body(response)
@@ -285,28 +290,16 @@ Last updated: {:02}/{:02}/{:02} {:02}:{:02}:{:03} UTC
 
             responded = True
             
-        elif incoming_msg.startswith('peaches'):
-            r = requests.get('https://www.reddit.com/r/booty/top.json?limit=20?t=day', headers = {'User-agent': 'your bot 0.1'})
+        elif incoming_msg == 'como estas?':
+            msg.body("Bien gracias, no me quejo")
             
-            if r.status_code == 200:
-                data = r.json()
-                memes = data['data']['children']
-                random_meme = random.choice(memes)
-                meme_data = random_meme['data']
-                title = meme_data['title']
-                image = meme_data['url']
-
-                msg.body(title)
-                msg.media(image)
-            
-            else:
-                msg.body('No puedo darte memes en este momento bro..')
-
             responded = True
             
-        
 
         if not responded:
              msg.body("No te entiendo, escribe hola para empezar")
 
         return HttpResponse(str(resp))
+    
+   
+        
