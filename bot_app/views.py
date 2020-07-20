@@ -40,7 +40,7 @@ def index(request):
 *Que tal, soy Davinci, el bot para combatir el aburrimiento de la cuarentena* :wave:
 Pronto mas actualizaciones :wink:
 Desarrollado por Carlos Robles :deciduous_tree:
-Sigueme en instagram @an_dres :camera:
+Visita www.roblesoft.com si quieres un bot para tu negocio o buscanos en facebook.com/Roblesoft  :camera:
 
 Puedes intentar escribir:
 :black_small_square: *'frase':* Frase motivacional:rocket:
@@ -311,7 +311,7 @@ Last updated: {:02}/{:02}/{:02} {:02}:{:02}:{:03} UTC
     
     if request.method == 'GET':
         
-        
+           
         return JsonResponse({"o":2})
     
    
