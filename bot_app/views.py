@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.http import JsonResponse
+from django.forms.models import model_to_dict
+from .models import Messages
 import requests
 from twilio.twiml.messaging_response import MessagingResponse
 from django.views.decorators.csrf import csrf_exempt
@@ -20,6 +22,10 @@ def index(request):
         # retrieve incoming message from POST request in lowercase
         incoming_msg = request.POST['Body'].lower()
         print(incoming_msg)
+        davincimsg = Messages(body=str(incoming_msg))
+        davincimsg.save()
+        
+        
         
 
         # create Twilio XML response
@@ -304,6 +310,7 @@ Last updated: {:02}/{:02}/{:02} {:02}:{:02}:{:03} UTC
         return HttpResponse(str(resp))
     
     if request.method == 'GET':
+        
         
         return JsonResponse({"o":2})
     

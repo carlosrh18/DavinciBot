@@ -10,7 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
+
 import os
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -25,12 +27,13 @@ SECRET_KEY = 'z0o5tcda8wtkr1p(y_r&%!6d85ksi91=nfekoeai@&c+ne39q)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['davincibot.herokuapp.com','2ee16da6ed21.ngrok.io']
+ALLOWED_HOSTS = ['davincibot.herokuapp.com','2ee16da6ed21.ngrok.io','127.0.0.1']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'bot_app.apps.BotAppConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
