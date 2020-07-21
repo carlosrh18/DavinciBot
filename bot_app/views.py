@@ -317,8 +317,9 @@ Last updated: {:02}/{:02}/{:02} {:02}:{:02}:{:03} UTC
             flag.append(mensaje)
             
         flagdict = {"body": flag[i] for i in range(0,len(flag))}
+        print(flagdict)
         
-        return JsonResponse(flagdict)
+        return JsonResponse({"Message":"hola"})
     
    
         
