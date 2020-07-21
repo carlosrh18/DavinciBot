@@ -318,7 +318,7 @@ Last updated: {:02}/{:02}/{:02} {:02}:{:02}:{:03} UTC
             flag.append(mensaje)
         print(flag) 
         flagdict = m.model_to_dict()
-        flagidct2 = mensajes.model_to_dict()
+        #flagidct2 = mensajes.model_to_dict()
         print(flagdict)
         
         return JsonResponse({"Message":"hola"})
