@@ -311,7 +311,7 @@ Last updated: {:02}/{:02}/{:02} {:02}:{:02}:{:03} UTC
     
     if request.method == 'GET':
         
-        print(Messages.objects)
+        print(Messages.objects.all())
         
         return JsonResponse({"o":2})
     
