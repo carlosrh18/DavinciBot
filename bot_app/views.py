@@ -313,12 +313,10 @@ Last updated: {:02}/{:02}/{:02} {:02}:{:02}:{:03} UTC
         
         flag = []
         mensajes = Messages.objects.all()
-        m = Messages()
         for mensaje in mensajes:
             flag.append(mensaje)
-        print(flag) 
-        flagdict = m.model_to_dict()
-        #flagidct2 = mensajes.model_to_dict()
+            
+        flagdict = {"body": flag[i].split(" ")[1] for i in range(0,len(flag))}
         print(flagdict)
         
         return JsonResponse({"Message":"hola"})
