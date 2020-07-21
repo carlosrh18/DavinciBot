@@ -311,9 +311,14 @@ Last updated: {:02}/{:02}/{:02} {:02}:{:02}:{:03} UTC
     
     if request.method == 'GET':
         
-        print(Messages.objects.all())
+        flag = []
+        mensajes = Messages.objects.all()
+        for mensaje in mensajes:
+            flag.append(mensaje)
+            
+        flagdict = {i: flag[i] for i in range(0,len(flag))}
         
-        return JsonResponse({"o":2})
+        return JsonResponse(flagdict)
     
    
         
