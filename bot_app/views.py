@@ -311,7 +311,11 @@ Last updated: {:02}/{:02}/{:02} {:02}:{:02}:{:03} UTC
     
     if request.method == 'GET':
         
-           
+        dav = Messages()
+        fields= dav.__dict__
+        for field, value in fields.items():
+            print(field, value)
+        
         return JsonResponse({"o":2})
     
    
