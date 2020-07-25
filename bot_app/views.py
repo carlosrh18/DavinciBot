@@ -316,10 +316,10 @@ Last updated: {:02}/{:02}/{:02} {:02}:{:02}:{:03} UTC
         for mensaje in mensajes:
             flag.append(mensaje)
             
-        flagdict = {"body": flag[i].split(" ")[1] for i in range(0,len(flag))}
+        flagdict = {"body": str(flag[i]) for i in range(0,len(flag))}
         print(flagdict)
         
-        return JsonResponse({"Message":"hola"})
+        return JsonResponse(flagdict)
     
    
         
