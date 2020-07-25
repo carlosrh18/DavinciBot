@@ -11,6 +11,7 @@ import emoji
 import random
 import numpy
 import json
+import random 
 
 
 
@@ -302,6 +303,13 @@ Last updated: {:02}/{:02}/{:02} {:02}:{:02}:{:03} UTC
             msg.body("Bien gracias, no me quejo")
             
             responded = True
+            
+        elif incoming_msg == 'Quien es el mejor tio?':
+            a = ["Tio Luis","Tio Medico","Tio Carlos"]
+            tio = random.choice(a)
+            msg.body(tio)
+            
+
             
 
         if not responded:
