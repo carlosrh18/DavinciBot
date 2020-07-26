@@ -308,6 +308,8 @@ Last updated: {:02}/{:02}/{:02} {:02}:{:02}:{:03} UTC
             a = ["Tio Luis","Tio Medico","Tio Carlos"]
             tio = random.choice(a)
             msg.body(tio)
+
+            responded = True
             
 
             
