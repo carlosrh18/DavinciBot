@@ -190,7 +190,7 @@ Opciones:
         elif incoming_msg == 'Horario':
                 # return a dog pic
             
-            msg.body('De 9 de la mañana a 10 de la noche de Lunes a Jueves')
+            msg.body('De 9 de la mañana a 10 de la noche de Lunes a Jueves ')
             responded = True
 
         elif incoming_msg == 'Ordenar':
