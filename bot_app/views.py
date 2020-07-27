@@ -38,18 +38,19 @@ def index(request):
 
         if incoming_msg == 'hola':
             response = emoji.emojize("""
-*Que tal, soy Davinci, el bot para combatir el aburrimiento de la cuarentena* :wave:
-Pronto mas actualizaciones :wink:
-Desarrollado por Carlos Robles :deciduous_tree:
-Visita www.roblesoft.com si quieres un bot para tu negocio o buscanos en facebook.com/Roblesoft  :camera:
+*Bienvenidos a Café La Brisa* :wave:
+Selecciona una opción :wave:
+Desarrollado por www.roblesoft.com :deciduous_tree:
+Contáctanos en facebook.com/roblesoft  :camera:
 
-Puedes intentar escribir:
-:black_small_square: *'frase':* Frase motivacional:rocket:
-:black_small_square: *'gato'*: Imagenes de michis para relajarte :cat:
-:black_small_square: *'gatogif<tu nombre> ejemplo: gatogifCarlos'*: Imagenes de michis con tu nombre :smile_cat:
-:black_small_square: *'perro'*: Imagenes de perritos para relajarte :dog:
-:black_small_square: *'meme'*: Los mejores memes en inglés de hoy :volcano:
-:black_small_square: *'ya puedo salir?':* Estado actual de la cuarentena del Covid-19 :mask:
+Opciones:
+ :small_blue_diamond: *'Bebidas':* Explora nuestro menú de bebidas :cofee:
+ :small_blue_diamond: *'Postres'*: Explora nuestro menú de postres :cake:
+ :small_blue_diamond: *'Pizzas'*: Explora nuestro variado menú de pizzas :pizza:
+ :small_blue_diamond: *'Hamburguesas'*: Explora nuestro variado menú de hamburguesas :hamburger:
+ :small_blue_diamond: *'Horario'*: Consulta nuestros horarios :clock10:
+ :small_blue_diamond: *'Formas de pago':* Tarjetas y métodos de pago que manejamos :credit_card:
+ :small_blue_diamond: *'Politicas':* Politicas sanitarias respecto a la situación del COVID-19 :bulb:
 """, use_aliases=True)
             msg.body(response)
             responded = True
