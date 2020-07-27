@@ -9,9 +9,5 @@ class Messages(models.Model):
 
 
 # Food order model
-class FoodOrder(models.Model):
-	Table = models.IntegerField()
-	MenuPick = models.IntegerFIeld()
-	Instruc = models.TextField()
-	coupon = models.CharField(max_length=10, blank=True)
+
 	
