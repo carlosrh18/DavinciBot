@@ -44,7 +44,7 @@ Desarrollado por www.roblesoft.com :deciduous_tree:
 Contáctanos en facebook.com/roblesoft  :camera:
 
 Opciones:
- :small_blue_diamond: *'Bebidas':* Explora nuestro menú de bebidas :cofee:
+ :small_blue_diamond: *'Bebidas':* Explora nuestro menú de bebidas :coffee:
  :small_blue_diamond: *'Postres'*: Explora nuestro menú de postres :cake:
  :small_blue_diamond: *'Pizzas'*: Explora nuestro variado menú de pizzas :pizza:
  :small_blue_diamond: *'Hamburguesas'*: Explora nuestro variado menú de hamburguesas :hamburger:
