@@ -70,6 +70,7 @@ Opciones:
  
 
 """, use_aliases=True)
+            msg.body(response)
             responded = True
 
 
