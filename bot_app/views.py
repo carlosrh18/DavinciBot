@@ -52,6 +52,9 @@ Opciones:
  :small_blue_diamond: *'Pago':* Pagar usando paypal :credit_card:
  :small_blue_diamond: *'Ordenar':* Llamar a mesero para ordenar :credit_card:
  :small_blue_diamond: *'Politicas':* Politicas sanitarias respecto a la situación del COVID-19 :bulb:
+ :small_blue_diamond: *'Meme':* Diviértete con los mejores memes mientras esperas tu orden :penguin:
+  :small_blue_diamond: *'Fotos':* Explora las fotos de nuestros platillos y bebidas :camera:
+
 """, use_aliases=True)
             msg.body(response)
             responded = True
@@ -393,6 +396,26 @@ Last updated: {:02}/{:02}/{:02} {:02}:{:02}:{:03} UTC
             
             else:
                 msg.body('No puedo darte memes en este momento bro..')
+
+            responded = True
+
+
+        elif incoming_msg.startswith('fotos'):
+            r = requests.get('https://www.reddit.com/r/foodphotography/top.json?limit=20?t=day', headers = {'User-agent': 'your bot 0.1'})
+            
+            if r.status_code == 200:
+                data = r.json()
+                memes = data['data']['children']
+                random_meme = random.choice(memes)
+                meme_data = random_meme['data']
+                title = meme_data['title']
+                image = meme_data['url']
+
+                msg.body(title)
+                msg.media(image)
+            
+            else:
+                msg.body('No puedo acceder a las fotos en este momento..')
 
             responded = True
             
