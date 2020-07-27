@@ -56,7 +56,7 @@ Opciones:
             msg.body(response)
             responded = True
 
-        elif incoming_msg == 'Bebidas':
+        elif incoming_msg == 'bebidas':
             # return drinks menu
             response = emoji.emojize("""
 *Menú de Bebidas* :coffee:
@@ -74,7 +74,7 @@ Opciones:
 
 
 
-        elif incoming_msg == 'Postres':
+        elif incoming_msg == 'postres':
             # return drinks menu
             response = emoji.emojize("""
 *Menú de Postres* :coffee:
@@ -88,10 +88,12 @@ Opciones:
  
 
 """, use_aliases=True)
+
+            msg.body(response)
             responded = True
 
 
-        elif incoming_msg == 'Pizzas':
+        elif incoming_msg == 'pizzas':
             # return drinks menu
             response = emoji.emojize("""
 *Menú de Pizzas* :coffee:
@@ -105,10 +107,11 @@ Opciones:
  
 
 """, use_aliases=True)
+            msg.body(response)
             responded = True
 
 
-        elif incoming_msg == 'Hamburguesas':
+        elif incoming_msg == 'hamburguesas':
             # return drinks menu
             response = emoji.emojize("""
 *Menú de Hamburguesas* :coffee:
@@ -122,6 +125,7 @@ Opciones:
  
 
 """, use_aliases=True)
+            msg.body(response)
             responded = True
 
             
@@ -187,13 +191,13 @@ Opciones:
             msg.body('Si, pero con cubrebocas, guardando sana distancia. Si no es necesario, no salgas')
             responded = True
 
-        elif incoming_msg == 'Horario':
+        elif incoming_msg == 'horario':
                 # return a dog pic
             
-            msg.body('De 9 de la mañana a 10 de la noche de Lunes a Jueves ')
+            msg.body('De 9 de la mañana a 10 de la noche de Lunes a Jueves')
             responded = True
 
-        elif incoming_msg == 'Ordenar':
+        elif incoming_msg == 'ordenar':
                 # return a dog pic
             
             msg.body('Un mesero viene en camino a tomar tu orden')
