@@ -402,7 +402,7 @@ Last updated: {:02}/{:02}/{:02} {:02}:{:02}:{:03} UTC
             responded = True
 
 
-        elif incoming_msg == 'Pago':
+        elif incoming_msg == 'pago':
             msg.body("Para configurar la función de pago paypal contacta a www.roblesoft.com")
             
             responded = True
