@@ -36,7 +36,7 @@ def index(request):
 
         responded = False
 
-        if incoming_msg == 'hola':
+        if incoming_msg == 'hola' or incoming_msg == 'volver':
             response = emoji.emojize("""
 *Bienvenidos a Café La Brisa* :wave:
 Selecciona una opción :wave:
@@ -49,11 +49,84 @@ Opciones:
  :small_blue_diamond: *'Pizzas'*: Explora nuestro variado menú de pizzas :pizza:
  :small_blue_diamond: *'Hamburguesas'*: Explora nuestro variado menú de hamburguesas :hamburger:
  :small_blue_diamond: *'Horario'*: Consulta nuestros horarios :clock10:
- :small_blue_diamond: *'Formas de pago':* Tarjetas y métodos de pago que manejamos :credit_card:
+ :small_blue_diamond: *'Pago':* Pagar usando paypal :credit_card:
+ :small_blue_diamond: *'Ordenar':* Llamar a mesero para ordenar :credit_card:
  :small_blue_diamond: *'Politicas':* Politicas sanitarias respecto a la situación del COVID-19 :bulb:
 """, use_aliases=True)
             msg.body(response)
             responded = True
+
+        elif incoming_msg == 'Bebidas':
+            # return drinks menu
+            response = emoji.emojize("""
+*Menú de Bebidas* :coffee:
+
+
+Opciones:
+ :small_blue_diamond: *Café americano* --- $45 :coffee:
+ :small_blue_diamond: *Refresco* --- $15 :cocktail:
+ :small_blue_diamond: *Vino tinto* --- $250 :wine_glass:
+ Regresar al menu principal: '*volver*' :arrow_backward:
+ 
+
+""", use_aliases=True)
+            responded = True
+
+
+
+        elif incoming_msg == 'Postres':
+            # return drinks menu
+            response = emoji.emojize("""
+*Menú de Postres* :coffee:
+
+
+Opciones:
+ :small_blue_diamond: *Pastel* --- $45 :coffee:
+ :small_blue_diamond: *Brownie* --- $15 :cocktail:
+
+ Regresar al menu principal: '*volver*' :arrow_backward:
+ 
+
+""", use_aliases=True)
+            responded = True
+
+
+        elif incoming_msg == 'Pizzas':
+            # return drinks menu
+            response = emoji.emojize("""
+*Menú de Pizzas* :coffee:
+
+
+Opciones:
+ :small_blue_diamond: *Hawaiiana* --- $200 :coffee:
+ :small_blue_diamond: *Italiana* --- $235 :cocktail:
+ 
+ Regresar al menu principal: '*volver*' :arrow_backward:
+ 
+
+""", use_aliases=True)
+            responded = True
+
+
+        elif incoming_msg == 'Hamburguesas':
+            # return drinks menu
+            response = emoji.emojize("""
+*Menú de Hamburguesas* :coffee:
+
+
+Opciones:
+ :small_blue_diamond: *Doble* --- $120 :coffee:
+ :small_blue_diamond: *Sencilla* --- $80 :cocktail:
+ 
+ Regresar al menu principal: '*volver*' :arrow_backward:
+ 
+
+""", use_aliases=True)
+            responded = True
+
+            
+
+
 
         elif incoming_msg == 'frase':
             # returns a quote
@@ -108,6 +181,24 @@ Opciones:
             msg.media(data['message'])
             responded = True
             
+        elif incoming_msg == 'ya puedo salir?':
+                # return a dog pic
+            
+            msg.body('Si, pero con cubrebocas, guardando sana distancia. Si no es necesario, no salgas')
+            responded = True
+
+        elif incoming_msg == 'Horario':
+                # return a dog pic
+            
+            msg.body('De 9 de la mañana a 10 de la noche de Lunes a Jueves')
+            responded = True
+
+        elif incoming_msg == 'Ordenar':
+                # return a dog pic
+            
+            msg.body('Un mesero viene en camino a tomar tu orden')
+            responded = True
+
         elif incoming_msg == 'ya puedo salir?':
                 # return a dog pic
             
@@ -304,7 +395,13 @@ Last updated: {:02}/{:02}/{:02} {:02}:{:02}:{:03} UTC
             msg.body("Bien gracias, no me quejo")
             
             responded = True
+
+
+        elif incoming_msg == 'Pago':
+            msg.body("Para configurar la función de pago paypal contacta a www.roblesoft.com")
             
+            responded = True
+
         elif incoming_msg == 'Quien es el mejor tio?':
             a = ["Tio Luis","Tio Medico","Tio Carlos"]
             tio = random.choice(a)
