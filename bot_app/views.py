@@ -66,7 +66,7 @@ Opciones:
  :small_blue_diamond: *Café americano* --- $45 :coffee:
  :small_blue_diamond: *Refresco* --- $15 :cocktail:
  :small_blue_diamond: *Vino tinto* --- $250 :wine_glass:
- Regresar al menu principal: '*volver*' :arrow_backward:
+ Regresar al menu principal: *volver* :arrow_backward:
  
 
 """, use_aliases=True)
@@ -84,7 +84,7 @@ Opciones:
  :small_blue_diamond: *Pastel* --- $45 :coffee:
  :small_blue_diamond: *Brownie* --- $15 :cocktail:
 
- Regresar al menu principal: '*volver*' :arrow_backward:
+ Regresar al menu principal: *volver* :arrow_backward:
  
 
 """, use_aliases=True)
@@ -103,7 +103,7 @@ Opciones:
  :small_blue_diamond: *Hawaiiana* --- $200 :coffee:
  :small_blue_diamond: *Italiana* --- $235 :cocktail:
  
- Regresar al menu principal: '*volver*' :arrow_backward:
+ Regresar al menu principal: *volver* :arrow_backward:
  
 
 """, use_aliases=True)
@@ -121,7 +121,7 @@ Opciones:
  :small_blue_diamond: *Doble* --- $120 :coffee:
  :small_blue_diamond: *Sencilla* --- $80 :cocktail:
  
- Regresar al menu principal: '*volver*' :arrow_backward:
+ Regresar al menu principal: *volver* :arrow_backward:
  
 
 """, use_aliases=True)
