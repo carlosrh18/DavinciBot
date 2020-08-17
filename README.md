@@ -4,9 +4,9 @@ An Ai bot to be an artificial friend in times of COVID-19
 ![Logo](DAVINCI.png "Logo")
 
 
-##DEPLOY ON LOCAL
+## DEPLOY ON LOCAL
 
-###Install dependencies
+### Install dependencies
 
 pip install -r requirements.txt
 
