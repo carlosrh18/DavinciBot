@@ -6,6 +6,7 @@ import requests
 from twilio.twiml.messaging_response import MessagingResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.http import HttpResponse
+from storage import dropbox_folder_from, save_on_dropbox
 import datetime
 import emoji
 import random
@@ -21,6 +22,10 @@ def index(request):
         
     if request.method == 'POST':
         # retrieve incoming message from POST request in lowercase
+        num_media = int(request.values['NumMedia'])
+        media = request.values.get('MediaContentType0', '')
+        user_phone_number = request.values['From']
+        print([media, num_media, user_phone_number])
         incoming_msg = request.POST['Body'].lower()
         print(incoming_msg)
         davincimsg = Messages(body=str(incoming_msg))
